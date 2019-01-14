@@ -1,0 +1,55 @@
+@import url ('https://fonts.googleapis.com/css?family= Open + Sans ');
+
+@import url('headerTag.css');
+@import url('menu.css');
+@import url('detalle.css');
+@import url('estado.css');
+
+*{
+    margin: 0;
+	padding: 0;
+	box-sizing: 0;
+}
+
+body{
+    background-color: #d0d0d0; /*c1baba*/
+    font-family: 'Open Sans', sans-serif;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    color: #333;
+    padding: 10px;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor{
+    width: 100%;
+    position: relative;
+}
+
+
+@media (min-width:480px){
+    .contenedor{
+        width: 90%;
+    }
+}
+
+@media (min-width:768px){
+    
+    .contenedor #detalleCNC{
+        float: left;
+        margin-right: 0px;
+    }
+    
+    .contenedor #estadoCNC{
+        float: right;
+        width: 65%;
+        margin-left: 0px;
+    }
+}

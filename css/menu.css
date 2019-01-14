@@ -1,0 +1,81 @@
+#barPage{
+    width: auto;
+    display: flex;
+    justify-content: center;
+    background: #524b4b;
+    padding: 7px;
+}
+
+.menu{
+    display: flex;
+    justify-content: flex-end;
+    float: right;
+}
+
+#fechaMenu{
+    display: none;
+    justify-content: flex-end;
+    float: none;
+    color: #fff;
+}
+
+.menu form{
+    display: inline-block;
+}
+
+.menu input,#btnConectar{
+    padding: 5px;
+    font-size: 16px;
+    outline: inherit;
+}
+
+.menu input,#btnConectar{
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 16px;
+    outline: inherit;
+}
+
+#urlAgente{
+    width: 100%;
+    max-width: 270px;
+    border-radius: 5px 0px 0px 5px;
+}
+
+#btnConectar{
+    cursor: pointer;
+    position: relative;
+    border-radius: 0px 5px 5px 0px;
+}
+
+#btnConectar:hover #tooltip-btn-connect{
+    visibility: visible;
+    opacity: 1;
+}
+
+#tooltip-btn-connect{
+    position: absolute;
+    visibility: hidden;
+    color: #fff;
+    background: rgba(0,0,0,0.5);
+    left: -100%;
+    bottom: 115%;
+    border-radius: 4px;
+    padding: 3px;
+}
+
+.t-de-conexion{
+    color: rgba(255,255,255,0.7);
+}
+
+@media (min-width:578px){
+    #fechaMenu{
+        display: none;
+        justify-content: flex-start;
+        float: left;
+        color: #fff;
+        position: absolute;
+        top: 25%;
+    }
+}
+

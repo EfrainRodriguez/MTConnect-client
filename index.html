@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Cliente Web</title>
+    <meta charset="UTF-8"/>
+    <meta name="description" content="#">
+    <meta name="author" content="#">
+    <link rel="stylesheet" type="text/css" href="css/fontello.css" />
+    <link rel="stylesheet" type="text/css" href="css/estilos.css" />
+</head>
+<body onload="onLoad()">
+    <header id="headerTag" class="header-page">
+        <div class="contenedor">
+            <h3>
+                <a href="http://ladprer.alvarestech.com/" target="_blank"><span>LaDPRER - </span>Remote Monitoring</a>
+            </h3>
+        </div>
+    </header>
+    <div id="barPage" class="bar-page">
+        <div class="contenedor">
+            <div id="fechaMenu">
+                <div>
+<!--                    <p id="fechaHora">Lunes 05 de Noviembre del 2018</p>-->
+                    <span>
+                        <span class="t-de-conexion">Time Elapsed:&nbsp;</span>
+                        <span id="tiempoSesion">00:01:26:48</span>
+                    </span>
+                </div>
+            </div>
+			<div class="menu">
+                <input id="urlAgente" type="text" placeholder="url agente" autocomplete="on" onsubmit="conectar();" value="http://localhost:5000/">
+                    <button id="btnConectar" class="icon-link" onclick="conectar();">
+                        <span id="tooltip-btn-connect">Conectar</span>
+                    </button>
+                </input>
+			</div>  
+        </div>
+    </div>
+    
+    <main>
+        <div class="contenedor">
+            <div id="detalleCNC">
+                <h3>
+                    <span>Detail &#40;</span>
+                    <span id="estCNC">Disconnected</span>
+                    <span>&#41;</span>
+                </h3>
+                <div id="desCNC" class="descripcionCNC">
+                    <span>ID:</span>
+                    <span>Device:</span>
+                    <span>Sample:</span>
+                    <span>UUID:</span>
+                </div>
+                <div id="valDesCNC" class="descripcionCNC">
+                    <span id="idCNC">&nbsp;</span>
+                    <span id="nameCNC">&nbsp;</span>
+                    <span id="sampleInterval">&nbsp;</span>
+                    <span id="uuidCNC">&nbsp;</span>
+                </div>
+            </div>
+            
+            <div id="estadoCNC">
+                <h3>
+                    <span>Process Status</span>
+                </h3>
+                <table>
+                    <tr>
+                        <th>X&#40;mm&#41;</th>
+                        <th>Y&#40;mm&#41;</th>
+                        <th>Z&#40;mm&#41;</th>
+                        <th>E&#40;mm&#41;</th>
+                    </tr>
+                    <tr>
+                        <td id="ejeX">0.0</td>
+                        <td id="ejeY">0.0</td>
+                        <td id="ejeZ">0.0</td>
+                        <td id="extrusor">0.0</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <th>Extruder Temp.&#40;&deg;C&#41;</th>
+                        <th>Heatbed Temp.&#40;&deg;C&#41;</th>
+                    </tr>
+                    <tr>
+                        <td id="tempExtrusor">0</td>
+                        <td id="tempBase">0</td>
+                    </tr>
+                </table>
+            </div>
+          <p id="cont"></p>
+        </div>
+    </main>
+    
+    <script type="text/javascript" src="js/conectarACNC.js"></script>
+    <script type="text/javascript" src="js/tiempoConexion.js"></script>
+    <script type="text/javascript" src="js/pedirDatosXML.js"></script>
+    
+</body>
+</html>

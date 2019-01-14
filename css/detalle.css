@@ -1,0 +1,44 @@
+#detalleCNC{
+    padding: 5px;
+    border: 2px solid rgb(0,0,0,0.5);
+    margin: 10px;
+    text-align: left;
+    background: #fff;
+    border-radius: 5px
+}
+
+#detalleCNC h3{
+    background: rgba(0,0,0,0.2);
+    margin-bottom: 5px;
+} 
+
+#detalleCNC h3 span{
+    display: inline-block;
+} 
+
+#estCNC{
+    color: red;
+}
+
+#detalleCNC span{
+    padding: 1px;
+    display: block;
+    border: solid 1px rgba(0,0,0,0);
+}
+
+#detalleCNC .descripcionCNC{
+    display: inline-block;
+}
+
+#desCNC{
+    text-align: right;
+    color: rgba(0,0,0,0.7);
+}
+
+
+
+@media (min-width:768px){
+    #detalleCNC{
+        width: 30%;
+    }
+}
